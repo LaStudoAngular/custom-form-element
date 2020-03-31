@@ -1,0 +1,7 @@
+<button
+  class="button"
+  [type]="buttonType"
+  [class]="buttonClass"
+  [ngClass]="buttonMode === 'normal' ? 'button--half-width' : 'button--full-width'"
+  (click)="buttonClick()"
+>{{ buttonText }}</button>

@@ -1,0 +1,29 @@
+<h2>first component</h2>
+
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <ec-custom-input
+    class="form__element"
+    [inputType]="'text'"
+    [inputPlaceholder]="'name'"
+    formControlName="name"
+  ></ec-custom-input>
+  <ec-custom-input
+    class="form__element"
+    [inputType]="'email'"
+    [inputPlaceholder]="'email'"
+    formControlName="email"
+  ></ec-custom-input>
+  <ec-custom-input
+    class="form__element"
+    [inputType]="'tel'"
+    [inputPlaceholder]="'phone'"
+    formControlName="phone"
+  ></ec-custom-input>
+  <ec-custom-button
+    [buttonType]="'submit'"
+    [buttonClass]="'button--primary'"
+    [buttonText]="'send'"
+    [buttonMode]="'block'"
+    (buttonEvent)="buttonEventHandler($event)"
+  ></ec-custom-button>
+</form>

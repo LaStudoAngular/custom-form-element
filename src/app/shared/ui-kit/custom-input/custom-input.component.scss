@@ -1,0 +1,12 @@
+input {
+  width: 100%;
+  border: olive solid 1px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  color: darkolivegreen;
+
+  &::placeholder {
+    color: darkolivegreen;
+    text-transform: capitalize;
+  }
+}
