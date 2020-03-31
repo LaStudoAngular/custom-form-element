@@ -1,9 +1,24 @@
 <h2>second component</h2>
 
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <ec-custom-input class="form__element" [inputType]="'text'" [inputPlaceholder]="'name'"></ec-custom-input>
-  <ec-custom-input class="form__element" [inputType]="'email'" [inputPlaceholder]="'email'"></ec-custom-input>
-  <ec-custom-input class="form__element" [inputType]="'tel'" [inputPlaceholder]="'phone'"></ec-custom-input>
+  <ec-custom-input
+    class="form__element"
+    [inputType]="'text'"
+    [inputPlaceholder]="'name'"
+    formControlName="name"
+  ></ec-custom-input>
+  <ec-custom-input
+    class="form__element"
+    [inputType]="'email'"
+    [inputPlaceholder]="'email'"
+    formControlName="email"
+  ></ec-custom-input>
+  <ec-custom-input
+    class="form__element"
+    [inputType]="'tel'"
+    [inputPlaceholder]="'phone'"
+    formControlName="phone"
+  ></ec-custom-input>
   <ec-custom-button
     [buttonType]="'submit'"
     [buttonClass]="'button--secondary'"

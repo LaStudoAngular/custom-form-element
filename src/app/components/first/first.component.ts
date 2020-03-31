@@ -19,12 +19,15 @@ export class FirstComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.buttonEventHandler();
+    if (this.form.valid) {
+      const { name, email, phone } = this.form.value;
+      this.form.reset();
+      console.log(name, email, phone);
+    }
   }
 
-  buttonEventHandler(event?: string): void {
-    const { name, email, phone } = this.form.value;
-    console.log(name, email, phone);
+  buttonEventHandler(event: string): void {
+    //
   }
 
 }

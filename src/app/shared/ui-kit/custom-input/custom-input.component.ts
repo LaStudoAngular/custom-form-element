@@ -16,8 +16,8 @@ import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/for
 export class CustomInputComponent implements OnInit, ControlValueAccessor {
   @Input() inputType = 'text';
   @Input() inputPlaceholder = 'placeholder';
-  public inputValue = new FormControl('');
 
+  inputValue = new FormControl('');
   private onChange: (value: string) => void;
   private onTouched: () => void;
 
@@ -55,7 +55,7 @@ export class CustomInputComponent implements OnInit, ControlValueAccessor {
   }
 
   focusHandler(): void {
-    console.log(`focus`);
+    //
   }
 
 }
